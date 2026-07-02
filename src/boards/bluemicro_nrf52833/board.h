@@ -22,33 +22,29 @@
  * THE SOFTWARE.
  */
 
-#ifndef _BLUEMICRO_NRF52833_H
-#define _BLUEMICRO_NRF52833_H
+#ifndef _LIKKLE_MFG_CUTZO_500_H
+#define _LIKKLE_MFG_CUTZO_500_H
 
 /*------------------------------------------------------------------*/
 /* LED
  *------------------------------------------------------------------*/
 #define LEDS_NUMBER          2
-#define LED_PRIMARY_PIN      PINNUM(1, 4)
-#define LED_SECONDARY_PIN    PINNUM(0, 25)
+#define LED_PRIMARY_PIN      PINNUM(0, 20)
+#define LED_SECONDARY_PIN    PINNUM(0, 30)
 #define LED_STATE_ON         1
-
-#define LED_NEOPIXEL         PINNUM(0, 7)
-#define NEOPIXELS_NUMBER     1
-#define BOARD_RGB_BRIGHTNESS 0x040404
 
 /*------------------------------------------------------------------*/
 /* BUTTON
  *------------------------------------------------------------------*/
-#define BUTTON_DFU     PINNUM(0, 18) // unusable: RESET
-#define BUTTON_DFU_OTA PINNUM(1, 1)  // no connection on E73-2G4M08S1E Module
-#define BUTTON_PULL    NRF_GPIO_PIN_PULLUP
+#define BUTTON_DFU     PINNUM(0, 18)
+#define BUTTON_DFU_OTA PINNUM(0, 18)
+#define BUTTON_PULL    NRF_GPIO_PIN_PULLDOWN
 
 //--------------------------------------------------------------------+
 // BLE OTA
 //--------------------------------------------------------------------+
-#define BLEDIS_MANUFACTURER "BlueMicro"
-#define BLEDIS_MODEL        "BlueMicro 833"
+#define BLEDIS_MANUFACTURER "Likkle MFG"
+#define BLEDIS_MODEL        "Cutzo 500"
 
 //--------------------------------------------------------------------+
 // USB PID from openmoko:
@@ -58,9 +54,13 @@
 #define USB_DESC_UF2_PID      0x616f
 #define USB_DESC_CDC_ONLY_PID 0x616f
 
-#define UF2_PRODUCT_NAME      "BlueMicro"
-#define UF2_VOLUME_LABEL      "BLUEMICRO"
-#define UF2_BOARD_ID          "nRF52833-BlueMicro-v1"
-#define UF2_INDEX_URL         "http://bluemicro.jpconstantineau.com/"
+#define ENABLE_DCDC_0 0
+#define ENABLE_DCDC_1 0
 
-#endif // _BLUEMICRO_H
+#define UF2_PRODUCT_NAME      "Likkle MFG Cutzo 500"
+#define UF2_VOLUME_LABEL      "CUTZO500"
+#define UF2_BOARD_ID          "nRF52833-Likkle-MFG-Cutzo-500-v1"
+#define UF2_INDEX_URL         "na"
+
+#endif // _LIKKLE_MFG_CUTZO_500_H
+
